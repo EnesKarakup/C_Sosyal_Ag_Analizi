@@ -1,0 +1,42 @@
+# Kullanıcılar
+USER 101
+USER 102
+USER 103
+USER 104
+USER 105
+USER 106
+USER 107
+USER 108
+USER 109
+USER 110
+USER 111
+USER 112
+USER 113
+USER 114
+USER 115
+
+# Topluluk 1 (Beşli dairesel, iç bağlantı)
+FRIEND 101 102
+FRIEND 102 103
+FRIEND 103 104
+FRIEND 104 105
+FRIEND 105 101
+FRIEND 102 104
+
+# Topluluk 2 (Üçlü tam bağlı)
+FRIEND 106 107
+FRIEND 107 108
+FRIEND 106 108
+
+# Topluluk 3 (Dörtlü zincir ve çember)
+FRIEND 109 110
+FRIEND 110 111
+FRIEND 111 112
+FRIEND 109 112
+FRIEND 110 112
+
+# Topluluk 4 (İkili bağlantı)
+FRIEND 113 114
+
+# İzole kullanıcı
+# USER 115 (hiçbir arkadaşı yok)
