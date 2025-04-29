@@ -28,10 +28,6 @@ typedef struct StackNode {
     struct StackNode* next;
 } StackNode;
 
-void push(StackNode** top, User* user, int depth);
-StackNode* pop(StackNode** top);
-int isStackEmpty(StackNode* top);
-
 // Kırmızı-Siyah Ağaç için renkler ve düğüm
 typedef enum { RED, BLACK } Color;
 typedef struct RBTreeNode {
@@ -40,10 +36,6 @@ typedef struct RBTreeNode {
     Color color;
     struct RBTreeNode *left, *right, *parent;
 } RBTreeNode;
-
-RBTreeNode* rb_insert(RBTreeNode* root, int user_id, User* user_ptr);
-RBTreeNode* rb_search(RBTreeNode* root, int user_id);
-void inorder_rb(RBTreeNode* root);
 
 // Fonksiyon prototipleri
 void load_dataset(const char* filename, UserList* user_list);
@@ -57,6 +49,12 @@ void find_communities_and_isolated(UserList* list);
 void calculate_influence(User* user);
 void free_users(UserList* list);
 void free_rb_tree(RBTreeNode* root);
+void push(StackNode** top, User* user, int depth);
+StackNode* pop(StackNode** top);
+int isStackEmpty(StackNode* top);
+RBTreeNode* rb_insert(RBTreeNode* root, int user_id, User* user_ptr);
+RBTreeNode* rb_search(RBTreeNode* root, int user_id);
+void inorder_rb(RBTreeNode* root);
 
 // ---- ANA PROGRAM ----
 int main() {
